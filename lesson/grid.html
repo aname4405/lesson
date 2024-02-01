@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+
+        <style>
+            main{
+                display: grid;
+                grid-template-columns: [one] 100px [two] 200px [three] 100px;
+                grid-template-rows: [top] 300px [middle] 300px [bottom] 300px;
+            }
+
+            .a{
+                grid-column-start: two;
+                grid-column-end: two;
+                grid-row-start: top;
+                grid-row-end: middle;
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <main>
+            <div class="a">abc</div>
+        </main>
+
+    </body>
+</html>

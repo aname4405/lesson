@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="databind.js" defer></script>
+<script>
+/*let data = {
+    "telephone": "123456",
+    "address": "abc"
+}*/
+
+let data = JSON.parse( sessionStorage.getItem("data") );
+
+fetch("https://dummyjson.com/users/1")
+    .then(response => response.json())  //function(result){return result.json()}
+    .then(function(details) { 
+        console.log(details); 
+        data = details;
+        dataBind.display();
+    })
+    .catch(err=> console.error(err))
+    ;
+
+</script>
+
+    </head>
+
+    <body>
+        
+        <h1>Display Data</h1>
+        <p>Telephone: <span data="telephone"></span></p>
+        <p>Address: <span data="address.city"></span></p>
+
+        <p>Age: <span data="age"></span></p>
+        <p>First Name: <span data="firstName"></span></p>
+        <p>Family Name: <span data="lastName"></span></p>
+        <p>Email: <span data="email"></span></p>
+        <p>Eye Colour: <span data="eyeColor"></span></p>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

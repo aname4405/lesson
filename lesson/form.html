@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Form</h1>
+        <form action="http://www.nextpoint.co.uk/test.php" method="post">
+            <fieldset>
+                <legend>Job Details</legend>
+                <label for="jobInput">Job:</label>
+                <input id="jobInput" name="job" type="text" placeholder="Something" required />
+
+                <label>
+                    <span>Email:</span>
+                    <input type="email" name="email" value="abc" readonly />
+                </label>
+            </fieldset>
+
+
+
+
+            <input type="range" max="5" min="2" step="0.1" value="2" />
+            <input type="checkbox" value="Yes" />
+            
+            
+            <label>
+                <input type="radio" name="something" value="One" />
+                <span>Option A</span>
+            </label>
+            <label>
+                <input type="radio" name="something" value="One" />
+                <span>Option B</span>
+            </label>
+            <label>
+                <input type="radio" name="something" value="One" />
+                <span>Option C</span>
+            </label>
+
+
+            <input type="radio" name="something2" value="One" />
+            <input type="radio" name="something3" value="One" />
+            <input type="radio" name="something4" value="One" />
+
+
+            <input type="color" value="#FF9800" />
+            <input type="date" />
+            <input type="month" />
+            <input type="reset">
+            <textarea autofocus></textarea>
+
+            <select>
+                <option>---</option>
+                <option>red</option>
+                <option>green</option>
+                <option>blue</option>
+            </select>
+
+            <input type="button" value="abc" />
+            <button name="AAAA" value="xyz">123</button>
+
+            <input type="submit" value="Go!" />
+
+        </form>
+    </body>
+</html>

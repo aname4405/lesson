@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <script src="databind.js" defer></script>
+<script>
+let action = function(e){
+    alert(789)
+    console.log(e)
+}
+
+
+let data = {
+    "telephone": "123"
+};
+
+
+let addItem = function(templateName, targetSelector){
+    let parentNode = document.querySelector(targetSelector);
+
+    let template = document.querySelector(`[data-template="${templateName}"]`).innerHTML;
+    template = template.replaceAll("{count}", parentNode.children.length);
+
+    let node = document.createElement("div");
+    node.innerHTML = template;
+    parentNode.appendChild(node);
+}
+
+
+
+
+
+</script>
+
+    </head>
+<script>
+
+</script>
+
+    </head>
+    <body>
+
+        <input type="button" value="save" onclick="dataBind.save()" />
+
+        <input type="button" value="Add Item" 
+        onclick="addItem('itemB','#anotherItemList')"
+    />
+
+        <div id="anotherItemList">
+        </div>
+
+        <form>
+            <button>Click me</button>
+            <button>Click me</button>
+            <input name="telephone" />
+
+            <input name="address" />
+
+            <h1 data="telephone"></h1>
+
+            <textarea name="address"></textarea>
+
+            <h3 data="telephone"></h3>
+
+            <textarea name="telephone"></textarea>
+
+            <div id="itemList">
+            </div>
+            <input type="button" value="Add Item" 
+                onclick="addItem('itemA','#itemList')"
+            />
+
+
+        </form>
+
+        <template data-template="itemA">
+            <span>Item</span>
+            <span> - </span>
+            <span><input name="telephone{count}" /></span>
+        </template>   
+        
+        
+        <template data-template="itemB">
+            <span>*****</span>
+            <span> - </span>
+            <span><textarea name="address{count}"></textarea></span>
+        </template>   
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

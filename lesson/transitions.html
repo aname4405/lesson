@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transitions</title>
+
+        <style>
+            h1{
+                background: red;
+                color: yellow;
+                padding: 0;
+            }
+            
+
+            .hover{
+                transition: 
+                        background 1s linear 0s,
+                        color 1s linear 0s,
+                        padding 1s linear 0s;
+            }
+            .hover:hover{
+                background: yellow;
+                color: red;
+                padding-left: 10em;
+            }
+
+
+            .slow{
+                transition-duration: 5s;
+            }
+
+            .animated{
+              animation: barrel-roll 5s 2; 
+            }
+
+
+            @keyframes barrel-roll{
+                0%{
+                    transform: rotate(0deg);
+                }
+
+                50%{
+                    transform: rotate(90deg);
+                }
+
+                75%{
+                    transform: rotate(180deg);
+                }
+
+
+                100%{
+                    transform: rotate(360deg);
+                }
+            }
+
+
+        </style>
+
+    </head>
+    <body>
+
+
+        <h1 class="hover">Hello!</h1>
+
+        <h1 class="hover slow">Hello!</h1>
+
+        <h2 class="hover slow">Hello!</h2>
+
+        <h1 class="animated">Hello!</h1>
+
+    </body>
+</html>

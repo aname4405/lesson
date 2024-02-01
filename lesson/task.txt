@@ -1,0 +1,70 @@
+Create a form for your web application.
+
+
+----------------------------------------------
+
+
+Create a Javascript function that will produce a snapshot of the form.
+
+It will:
+* Capture all of the input elements.
+* Build an object that describes the data values of all input elements.
+* Outputs the description of the data form to the console as JSON.
+
+
+USEFUL COMMANDS:
+
+document.querySelectorAll()
+
+
+
+----------------------------------------------
+
+
+Identify the different events that the form snapshot function could
+be assigned to.
+
+
+----------------------------------------------
+
+
+Create a button that calls the form snapshot function when clicked.
+
+
+----------------------------------------------
+
+
+Add data binding functionality to the form so that the data object
+is immediately updated whenever any of the input fields are updated.
+
+
+----------------------------------------------
+
+
+Extend the data binding functionality to show live updates to any
+references to the data on the page.
+
+
+----------------------------------------------
+
+
+
+Create a feature that allows new form items
+to be added by clicking on the button.
+
+
+
+
+
+
+
+
+data = ["A","B","C"];
+
+for(let item in data){
+  console.log(item);
+}
+
+for(let index of data){
+  console.log(index);
+}

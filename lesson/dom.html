@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+
+        <h1 id="title">Hello!</h1>
+        <h1 class="highlight">ABC!</h1>
+        <ul id="menu">
+            <li>Item</li>
+            <li class="highlight">Item</li>
+            <li data="123">Item</li>
+            <li data="789">Item</li>
+            <li data="***">Item</li>
+        </ul>
+
+
+        <p class="highlight">Content...</p>
+        <input value="a" />
+        <input value="b" />
+        <input value="c" />
+
+
+<script>
+function test(){
+    let nodeList = document.querySelectorAll('[value]');
+
+    for(let node of nodeList){
+        //node.innerHTML = node.innerHTML + "<span style='color:red'>*****</span>"
+        console.log( node.value );
+    }
+}
+
+
+</script>
+
+    </body>
+</html>

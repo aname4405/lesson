@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+
+        <style>
+
+            body{
+                font-size: 20px;
+            }
+
+
+            h1{
+              background: blue;
+              color: white;  
+            }
+
+            main{
+                background: orange;
+            }
+
+            p{
+             color: pink;   
+            }
+
+            strong{
+                background: red;
+            }
+
+
+            #notice{
+                display: block;
+                background: green;
+                color: pink;
+                font-size: 2em;
+                padding: 1em;
+                width: calc(50vw + 100px);
+                height: 25vh;
+                overflow: auto;
+            }
+
+
+            #notice > a{
+                font-weight: bold;
+                text-decoration: underline;
+            }
+
+
+            .big{
+                font-size: 4em;
+            }
+
+            .highlight{
+                background: purple;
+            }
+
+            
+            
+            [autofocus]{
+                background: yellow;
+            }
+
+            [href*="google" i]{
+                background: red;
+                color: white;
+            }
+
+            [type="number"]{
+                background: blue;
+                color: white;
+            }
+
+            [max="3"]{
+                display: inline-block;
+                width: 3em;
+            }
+
+            [readonly]{
+                color: red;
+                opacity: .5;
+                border: 2px solid red;
+            }
+            
+
+            @media screen and (min-width:700px), (max-width:1700px){
+                body{
+                    background: blue;
+                }
+            }
+
+            @media screen and (max-width:700px){
+                body{
+                    background: orange;
+                }
+            }
+
+            @media print {
+                body{
+                    background: green;
+                }
+            }
+            
+        </style>
+
+
+    </head>
+    <body>
+
+
+        <button onclick="document.body.style.fontSize='10px'">10px</button>
+        <button onclick="document.body.style.fontSize='20px'">20px</button>
+        <button onclick="document.body.style.fontSize='30px'">30px</button>
+        <button onclick="document.body.style.fontSize='40px'">40px</button>
+
+        <input type="range" oninput="document.body.style.fontSize=this.value+'px'" min="10" max="50" />
+
+        <input readonly />
+        <input autofocus />
+        <input type="number" />
+        <input max="3" />
+
+        <main>
+            <h1>Hello!</h1>
+            <p>This is <strong>content</strong>...</p>
+            <p class="highlight">This is content...</p>
+            <p>This is content...</p>
+            <p><a href="https://www.google.com">Google</a></p>
+            <p><a href="https://www.facebook.com">Facebook</a></p>
+            <p><a href="https://www.apple.com">Apple</a></p>
+            <p><a href="https://www.google.com">Google</a></p>
+            <p><a href="https://www.microsoft.com">Microsoft</a></p>
+            <p><a href="https://www.Google.com">Google</a></p>
+            
+        </main>
+
+
+        <p>Content...</p>
+        <p>Content...</p>
+        <p>Content...</p>
+        <p>Content...</p>
+
+        <span id="notice">
+            <div class="highlight big">
+                <p>This is the notice...</p>
+            </div>
+            <p>Content...</p>
+            <p><a>Content...</a></p>
+            <p>Content...</p>
+            <a>ABC</a>
+        </span>
+
+    </body>
+</html>

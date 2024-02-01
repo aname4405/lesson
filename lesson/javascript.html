@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<script>
+
+var result = 50;
+console.log(">>>>>"+result);
+
+let something = (n=5)=>{
+    let result = 0;
+    console.log(result)
+    console.log("++++++",n)
+    console.log("=========")
+    for(let i=0; i<n; i++){
+        console.log(i);
+        result = result + i;
+    }
+    return result;
+}
+
+
+document.write(something())
+document.write("<br/>")
+let x = something(2)
+document.write(something(10) * 5)
+
+alert(x)
+
+console.log(">>>>>"+result);
+
+/*
+let data = ["a","b","c","d","e","f","g","h","i","j"];
+
+for(let i of data){
+    console.log(i)
+}
+*/
+
+
+
+/*for(let i=0; i < data.length; i=i+1){
+    console.log(data[i]);
+}*/
+
+
+///console.log(data.length);
+
+
+</script>
+
+    </head>
+    <body>
+
+    </body>
+</html>

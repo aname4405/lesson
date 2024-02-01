@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+<script>
+let something = {};
+
+let person = {
+    "name": "Dave",
+    "age": 20,
+    "height": 5.8,
+    "job": "bus driver",
+    "gender": "male",
+    "ethnicity": "white",
+    "register":["A","B","C","D"],
+    "address":{
+        "street": "ABC",
+        "city": "London",
+        "postcode": "XYZ"
+    },
+    "run": function(from, to){
+        console.log(`I will run from ${from} to ${to}.`);
+    },
+    "skillset":["programming","art","music"],
+    "telephone number": "1123123"
+}
+
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.job);
+console.log(person.register[0]);
+console.log(person.register[1]);
+console.log(person.register[2]);
+console.log(person.address);
+document.write(person.address);
+console.log(person.address.street);
+console.log(person.address.city);
+console.log(person.address.postcode);
+console.log(person.register.length);
+person.register.push("E");
+console.log(person.register);
+
+console.log(person.run("Manchester","London"));
+console.log(person['telephone number'])
+
+
+console.log(Object.keys(person))
+
+
+</script>
+
+    </head>
+    <body>
+
+
+<script>
+let html = '';
+
+
+for(let key of Object.keys(person)){
+    console.log(key, typeof person[key])
+    html += `<option>${key}</option>`;
+}
+
+let node = document.createElement("select");
+node.innerHTML = html;
+
+document.body.appendChild(node)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(let key of Object.keys(person)){
+    let input = '';
+    html = '';
+    switch(typeof person[key]){
+        case 'number':
+            input = `<input type="number" value="${person[key]}" />`;
+            break;
+
+        case 'object':
+            if(Array.isArray(person[key])){
+                input = person[key].join('<input type="checkbox" />') + '<input type="checkbox" />';
+            }else{
+                input = '<input type="color" value="${person[key]}" />';
+            }
+            break;
+        
+        case 'string':
+            input = `<input type="text" value="${person[key]}" />`;
+            break;
+    }
+
+    html += `<label><span>${key}<span> ${input}</label>`;
+    node = document.createElement('div');
+    node.innerHTML = html;
+    document.body.append(node);
+}
+
+</script>
+    </body>
+</html>
